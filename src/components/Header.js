@@ -3,10 +3,10 @@ import Logo from "../assets/logo.png";
 
 export const Header = () => {
 
-    const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || "dark");
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "medium");
 
     useEffect(() => {
-        localStorage.setItem("theme", JSON.stringfy(theme));
+        localStorage.setItem("theme", JSON.stringify(theme));
         document.documentElement.removeAttribute("class");
         document.documentElement.classList.add(theme);
     }, [theme]);
