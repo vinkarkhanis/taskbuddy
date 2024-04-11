@@ -10,6 +10,7 @@ export const Header = () => {
         document.documentElement.removeAttribute("class");
         document.documentElement.classList.add(theme);
     }, [theme]);
+    
 
     return (
         <header>
